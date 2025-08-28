@@ -69,7 +69,7 @@ The student implementation is in `NLQ/model/LightVSLNet.py`; its compressed buil
 *Technique 2 – Counterclockwise Block‑by‑Block Knowledge Distillation.*
 Implemented in utils/cbkd_helpers.py (pruning and KD utilities) and utils/cbkd_config.py (stage hyper‑parameters). The full pipeline is executed with cbkd_main.py, which prunes and retrains blocks of DeepVSLNet in successive stages, following the original paper.
 
-## Ectension 3: Post‑training static quantization (PTQ).
+## Extension 3: Post‑training static quantization (PTQ).
 The repository includes a prototype PTQ pipeline (utils/quantization_helpers.py). It performs module fusion, assigns per‑layer qconfigs, runs calibration on a held‑out subset, and converts the model to 8‑bit integers – all after full‑precision training is complete.
 
 Entry points main_quantization.py (eager mode) and main_fxquantization.py (FX graph mode).
@@ -87,3 +87,4 @@ A full description of the methodology, experiments and results is provided [here
 **FiLM: Visual Reasoning with a General Conditioning Layer**: Perez, E., Strub, F., de Vries, H., Dumoulin, V., & Courville, A. (2018). FiLM: Visual Reasoning with a General Conditioning Layer. Proceedings of the AAAI Conference on Artificial Intelligence, 32(1). https://doi.org/10.1609/aaai.v32i1.11671
 
 **Counterclockwise block-by-block knowledge distillation for neural network compression**: Lan, X., Zeng, Y., Wei, X. et al. Counterclockwise block-by-block knowledge distillation for neural network compression. Sci Rep 15, 11369 (2025). https://doi.org/10.1038/s41598-025-91152-3
+
